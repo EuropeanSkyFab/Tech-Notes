@@ -46,6 +46,8 @@ python E:\NEKO\MCP_Server.py
 
 MCP Server 核心代码（2.x 写法）：
 
+```bash
+
 from mcp.server.mcpserver import MCPServer
 import os
 
@@ -82,9 +84,11 @@ def list_files(dir: str = ".") -> str:
 
 if __name__ == "__main__":
     mcp.run()
+```
 
 JSON 导入配置：
 
+```bash
 {
   "name": "file-server",
   "transport": "stdio",
@@ -93,6 +97,7 @@ JSON 导入配置：
   "enabled": true,
   "auto_connect": true
 }
+```
 
 - 需要注意的坑：
   1. mcp 2.x 的导入路径是 mcp.server.mcpserver，类名是 MCPServer，不是 1.x 的 mcp.server.fastmcp.FastMCP。
